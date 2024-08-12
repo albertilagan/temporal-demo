@@ -19,3 +19,8 @@ dev restart [app]
 dev start [app]
 dev stop [app]
 ```
+
+## Links
+
+Web: [http://localhost:3000](http://localhost:3000)
+Temporal UI: [http://localhost:8233](http://localhost:8233)
