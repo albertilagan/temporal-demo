@@ -1,4 +1,4 @@
-import { activityInfo } from "@temporalio/activity";
+import { activityInfo, sleep } from "@temporalio/activity";
 
 export async function createUser(name: string) {
   const result = await fetch("http://localhost:3001/onboard", {
@@ -12,6 +12,7 @@ export async function createUser(name: string) {
 }
 
 export async function addToOrg(userId: number, org: string) {
+  await sleep(10000);
   const result = await fetch("http://localhost:3001/add-to-org", {
     method: "POST",
     body: JSON.stringify({ userId, org }),
@@ -23,6 +24,7 @@ export async function addToOrg(userId: number, org: string) {
 }
 
 export async function addToProject(userId: number, project: string) {
+  await sleep(10000);
   const result = await fetch("http://localhost:3001/add-to-project", {
     method: "POST",
     body: JSON.stringify({ userId, project }),
