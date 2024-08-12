@@ -1,0 +1,14 @@
+{
+  "name": "worker",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@temporal/core": "workspace:*",
+    "@temporalio/worker": "^1.10.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
+  }
+}

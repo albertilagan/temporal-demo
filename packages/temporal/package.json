@@ -1,0 +1,27 @@
+{
+  "name": "@temporal/core",
+  "private": true,
+  "exports": {
+    "./client": "./src/client.ts",
+    "./shared": "./src/shared.ts",
+    "./workflows": "./src/workflows.ts",
+    "./activities": "./src/activities.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  },
+  "dependencies": {
+    "@temporalio/activity": "^1.10.3",
+    "@temporalio/client": "^1.10.3",
+    "@temporalio/common": "^1.10.3",
+    "@temporalio/worker": "^1.10.3",
+    "@temporalio/workflow": "^1.10.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "typescript": "5.3.3"
+  }
+}

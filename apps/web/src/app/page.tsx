@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import { onboardUser } from "~/actions/onboard-user";
 
 export default function Home() {
   return (
@@ -46,7 +49,12 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-        <Button appName="web" className={styles.secondary}>
+        <Button
+          className={styles.secondary}
+          onClick={() => {
+            onboardUser("Albert", "ACME", "Project X");
+          }}
+        >
           Open alert
         </Button>
       </main>
